@@ -6,9 +6,15 @@ body {
 .container{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: -20px;
     text-align: center;
     
+}
+.headtext{
+    text-align: center;
+    margin: 50px;
+    font-size: 300%;
+    color: #1469a2;
 }
 .third{
     background-color: #DFDED9 ;
@@ -35,6 +41,7 @@ body {
 }
 h1{
     text-align: center;
+    align-items: center;
     color: white;
     
 }
