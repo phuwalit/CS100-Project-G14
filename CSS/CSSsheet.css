@@ -1,52 +1,65 @@
 
 body {
+   background-color:#F7F6F1 ;
+    justify-content: center;
+}
+.container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-top: 150px;
+    text-align: center;
     
 }
 .third{
-    margin-top: 110px;
+    background-color: #DFDED9 ;
     width: 230px;
-    height: 330px;
-    background:
-    linear-gradient(55deg, aqua 15%,  #1B4F72 65%);
-    border: solid black 3px;
+    height: 360px;
+    margin: 13px;
+    border-radius: 15px;
 } 
 .jerry{
-    margin-top: 110px;
+    margin: 13px;
     width: 230px;
-    height: 330px;
-    background:
-    linear-gradient(55deg, aqua 15%,  #1B4F72 65%);
-    border: solid black 3px;
+    height: 360px;
+    background-color: #DFDED9 ;
+    border-radius: 15px;
 }
 
 .polo{
-     margin-top: 180px;
+    margin: 13px;
     width: 230px;
-    height: 330px;
+    height: 360px;
     background:
-    linear-gradient(55deg, aqua 15%,  #1B4F72 60%);
-    border: solid black 3px;
-}
-.square{
-    width: 120px;
-    height: 120px;
-    background-color: rgb(255, 255, 255);
-    transform: rotate(45deg);
-    position: relative;
-    left: 53px;
-    top: -58px;
-    border: black solid 3px;
+    linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+    border-radius: 15px;
 }
 h1{
     text-align: center;
     color: white;
-    margin-top: -30px;
+    
 }
 p{
-    color: white;
+    color: rgb(136, 136, 136);
     font-size: large;
     margin-top: -30px;
     margin-left: 10px;
+}
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+.inicon{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.mailicon{
+    width: 40px;
+    height: 40px;
+    
 }
