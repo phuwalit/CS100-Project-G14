@@ -79,9 +79,15 @@
         .square-icon {
             width: 10px; 
             height: 10px; 
-            background-color: red; 
+            background-color:cornflowerblue;
             margin-top: 25px;
           }
+.ourpic{
+    width: 150px;
+         height: 150px;
+         border-radius: 150px;
+         
+}
 }
 @media only screen and (min-width: 600px){
         /* For tablets: */
@@ -153,7 +159,7 @@
     .square-icon {
         width: 10px; 
         height: 10px; 
-        background-color: red; 
+        background-color:cornflowerblue;
         margin-top: 25px;
       }
       .circle{
@@ -163,6 +169,12 @@
         background-color: white;
         margin-top: 15px;
         margin-left: 40px;
+    }
+    .ourpic{
+        width: 150px;
+             height: 150px;
+             border-radius: 150px;
+             
     }
 }
 @media only screen and (min-width: 768px){
@@ -235,7 +247,7 @@
     .square-icon {
         width: 10px; 
         height: 10px; 
-        background-color: red; 
+        background-color:cornflowerblue;
         margin-top: 25px;
       }
       .circle{
@@ -246,12 +258,13 @@
         margin-top: 15px;
         margin-left: 40px;
     }
-    .square-icon {
-        width: 10px; 
-        height: 10px; 
-        background-color: rgb(248, 129, 129); 
-        margin-top: 25px;
-      }
+
+      .ourpic{
+        width: 150px;
+             height: 150px;
+             border-radius: 150px;
+             
+    }
 }
 
 
