@@ -21,6 +21,7 @@
          color: #1469a2;
          display: flex;
          justify-content: center;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
      }
      .third{
          background-color: red ;
@@ -79,7 +80,7 @@
         .square-icon {
             width: 10px; 
             height: 10px; 
-            background-color:cornflowerblue;
+            background-color:#1469a2;
             margin-top: 25px;
           }
 .ourpic{
@@ -109,6 +110,7 @@
              color: #1469a2;
              display: flex;
              justify-content: center;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
          }
          .third{
             background-color: red  ;
@@ -159,7 +161,7 @@
     .square-icon {
         width: 10px; 
         height: 10px; 
-        background-color:cornflowerblue;
+        background-color:#1469a2;
         margin-top: 25px;
       }
       .circle{
@@ -196,6 +198,7 @@
         color: #1469a2;
         display: flex;
         justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         
     }
     .third{
@@ -247,7 +250,7 @@
     .square-icon {
         width: 10px; 
         height: 10px; 
-        background-color:cornflowerblue;
+        background-color:#1469a2;
         margin-top: 25px;
       }
       .circle{
