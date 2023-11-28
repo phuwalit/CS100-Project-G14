@@ -1,72 +1,257 @@
+@media only screen and (max-width: 768px){
+    /* For mobile phones: */
+    body {
+        background-color:#F7F6F1 ;
+         justify-content: center;
+         align-items: center;
+     }
+     .container{
+         display: flex;
+         justify-content: center;
+         margin-top: -20px;
+         text-align: center;
+         flex-direction: column;
+         align-items: center;
+         
+     }
+     .headtext{
+         text-align: center;
+         margin: 50px;
+         font-size: 270%;
+         color: #1469a2;
+         display: flex;
+         justify-content: center;
+     }
+     .third{
+         background-color: red ;
+         width: 230px;
+         height: 360px;
+         margin: 13px;
+         border-radius: 15px;
+     } 
+     .jerry{
+         margin: 13px;
+         width: 230px;
+         height: 360px;
+         background-color: red ;
+         border-radius: 15px;
+     }
+     
+     .polo{
+         margin: 13px;
+         width: 230px;
+         height: 360px;
+         background:
+         linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+         border-radius: 15px;
+     }
+     h1{
+         text-align: center;
+         align-items: center;
+         color: white;
+         
+     }
+     p{
+        color: white;
+         font-size: large;
+         margin-top: -30px;
+         margin-left: 10px;
+     }
+     .circle{
+         width: 150px;
+         height: 150px;
+         border-radius: 150px;
+         background-color: white;
+         margin-top: 15px;
+         margin-left: 40px;
+     }
+     .inicon{
+         width: 40px;
+         height: 40px;
+         margin-right: 20px;
+         margin-top: 10px;
+     }
+     .mailicon{
+         width: 40px;
+         height: 40px;
+         
+        }
+        .square-icon {
+            width: 10px; 
+            height: 10px; 
+            background-color: red; 
+            margin-top: 25px;
+          }
+}
+@media only screen and (min-width: 600px){
+        /* For tablets: */
+        body {
+            background-color:#F7F6F1 ;
+             justify-content: left;
+         }
+         .container{
+             display: flex;
+             justify-content: center;
+             margin-top: -20px;
+             text-align: center;
+             
+         }
+         .headtext{
+             text-align: center;
+             margin: 50px;
+             font-size: 250%;
+             color: #1469a2;
+             display: flex;
+             justify-content: center;
+         }
+         .third{
+            background-color: red  ;
+             width: 230px;
+             height: 360px;
+             margin: 13px;
+             border-radius: 15px;
+         } 
+         .jerry{
+             margin: 13px;
+             width: 230px;
+             height: 360px;
+             background-color: red ;
+             border-radius: 15px;
+         }
+         
+         .polo{
+             margin: 13px;
+             width: 230px;
+             height: 360px;
+             background:
+             linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+             border-radius: 15px;
+         }
+         h1{
+             text-align: center;
+             align-items: center;
+             color: white;
+             
+         }
+         p{
+            color: white;
+             font-size: large;
+             margin-top: -30px;
+             margin-left: 10px;
+         }
+         .inicon{
+             width: 40px;
+             height: 40px;
+             margin-right: 20px;
+             margin-top: 10px;
+         }
+         .mailicon{
+             width: 40px;
+             height: 40px;
+             
+    }
+    .square-icon {
+        width: 10px; 
+        height: 10px; 
+        background-color: red; 
+        margin-top: 25px;
+      }
+      .circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        background-color: white;
+        margin-top: 15px;
+        margin-left: 40px;
+    }
+}
+@media only screen and (min-width: 768px){
+    body {
+       background-color:#F7F6F1 ;
+        justify-content: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: -20px;
+        text-align: center;
+        
+    }
+    .headtext{
+        text-align: center;
+        margin: 50px;
+        font-size: 300%;
+        color: #1469a2;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .third{
+        background-color: red;
+        width: 230px;
+        height: 360px;
+        margin: 13px;
+        border-radius: 15px;
+    } 
+    .jerry{
+        margin: 13px;
+        width: 230px;
+        height: 360px;
+        background-color: red ;
+        border-radius: 15px;
+    }
+    
+    .polo{
+        margin: 13px;
+        width: 230px;
+        height: 360px;
+        background:
+        linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+        border-radius: 15px;
+    }
+    h1{
+        text-align: center;
+        align-items: center;
+        color: white;
+        
+    }
+    p{
+        color: white;
+        font-size: large;
+        margin-top: -30px;
+        margin-left: 10px;
+    }
+    .inicon{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .mailicon{
+        width: 40px;
+        height: 40px;
+        
+    }
+    .square-icon {
+        width: 10px; 
+        height: 10px; 
+        background-color: red; 
+        margin-top: 25px;
+      }
+      .circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        background-color: white;
+        margin-top: 15px;
+        margin-left: 40px;
+    }
+    .square-icon {
+        width: 10px; 
+        height: 10px; 
+        background-color: rgb(248, 129, 129); 
+        margin-top: 25px;
+      }
+}
 
-body {
-   background-color:#F7F6F1 ;
-    justify-content: center;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-    text-align: center;
-    
-}
-.headtext{
-    text-align: center;
-    margin: 50px;
-    font-size: 300%;
-    color: #1469a2;
-}
-.third{
-    background-color: #DFDED9 ;
-    width: 230px;
-    height: 360px;
-    margin: 13px;
-    border-radius: 15px;
-} 
-.jerry{
-    margin: 13px;
-    width: 230px;
-    height: 360px;
-    background-color: #DFDED9 ;
-    border-radius: 15px;
-}
 
-.polo{
-    margin: 13px;
-    width: 230px;
-    height: 360px;
-    background:
-    linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
-    border-radius: 15px;
-}
-h1{
-    text-align: center;
-    align-items: center;
-    color: white;
-    
-}
-p{
-    color: rgb(136, 136, 136);
-    font-size: large;
-    margin-top: -30px;
-    margin-left: 10px;
-}
-.circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    background-color: white;
-    margin-top: 15px;
-    margin-left: 40px;
-}
-.inicon{
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-.mailicon{
-    width: 40px;
-    height: 40px;
-    
-}
