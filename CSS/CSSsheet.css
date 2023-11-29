@@ -1,6 +1,7 @@
 @media only screen and (max-width: 768px){
     /* For mobile phones: */
     body {
+
         background-color:#F7F6F1 ;
          justify-content: center;
          align-items: center;
@@ -22,30 +23,42 @@
          display: flex;
          justify-content: center;
          font-family: Verdana, Geneva, Tahoma, sans-serif;
+         
      }
      .third{
-         background-color: red ;
-         width: 230px;
-         height: 360px;
-         margin: 13px;
-         border-radius: 15px;
-     } 
-     .jerry{
-         margin: 13px;
-         width: 230px;
-         height: 360px;
-         background-color: red ;
-         border-radius: 15px;
-     }
-     
-     .polo{
-         margin: 13px;
-         width: 230px;
-         height: 360px;
-         background:
-         linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
-         border-radius: 15px;
-     }
+        background-color: red;
+        width: 230px;
+        height: 360px;
+        margin: 13px;
+        border-radius: 15px;
+        transition: transform 0.2s ease-out; 
+    } 
+    .third:hover{
+        transform: scale(1.08);
+    } 
+    .jerry{
+        margin: 13px;
+        width: 230px;
+        height: 360px;
+        background-color: red ;
+        border-radius: 15px;
+        transition: transform 0.2s ease-out; 
+    }
+    .jerry:hover{
+        transform: scale(1.08);
+    } 
+    .polo{
+        margin: 13px;
+        width: 230px;
+        height: 360px;
+        background:
+        linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+        border-radius: 15px;
+        transition: transform 0.2s ease-out; 
+    }
+    .polo:hover{
+        transform: scale(1.08);
+    } 
      h1{
          text-align: center;
          align-items: center;
@@ -94,7 +107,7 @@
         /* For tablets: */
         body {
             background-color:#F7F6F1 ;
-             justify-content: left;
+             justify-content: center;
          }
          .container{
              display: flex;
@@ -113,28 +126,39 @@
              font-family: Verdana, Geneva, Tahoma, sans-serif;
          }
          .third{
-            background-color: red  ;
-             width: 230px;
-             height: 360px;
-             margin: 13px;
-             border-radius: 15px;
-         } 
-         .jerry{
-             margin: 13px;
-             width: 230px;
-             height: 360px;
-             background-color: red ;
-             border-radius: 15px;
-         }
-         
-         .polo{
-             margin: 13px;
-             width: 230px;
-             height: 360px;
-             background:
-             linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
-             border-radius: 15px;
-         }
+            background-color: red;
+            width: 230px;
+            height: 360px;
+            margin: 13px;
+            border-radius: 15px;
+            transition: transform 0.2s ease-out; 
+        } 
+        .third:hover{
+            transform: scale(1.085);
+        } 
+        .jerry{
+            margin: 13px;
+            width: 230px;
+            height: 360px;
+            background-color: red ;
+            border-radius: 15px;
+            transition: transform 0.2s ease-out; 
+        }
+        .jerry:hover{
+            transform: scale(1.08);
+        } 
+        .polo{
+            margin: 13px;
+            width: 230px;
+            height: 360px;
+            background:
+            linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
+            border-radius: 15px;
+            transition: transform 0.2s ease-out; 
+        }
+        .polo:hover{
+            transform: scale(1.08);
+        } 
          h1{
              text-align: center;
              align-items: center;
@@ -183,6 +207,8 @@
     body {
        background-color:#F7F6F1 ;
         justify-content: center;
+       
+        
     }
     .container{
         display: flex;
@@ -207,6 +233,10 @@
         height: 360px;
         margin: 13px;
         border-radius: 15px;
+        transition: transform 0.2s ease-out; 
+    } 
+    .third:hover{
+        transform: scale(1.08);
     } 
     .jerry{
         margin: 13px;
@@ -214,8 +244,11 @@
         height: 360px;
         background-color: red ;
         border-radius: 15px;
+        transition: transform 0.2s ease-out; 
     }
-    
+    .jerry:hover{
+        transform: scale(1.08);
+    } 
     .polo{
         margin: 13px;
         width: 230px;
@@ -223,7 +256,11 @@
         background:
         linear-gradient(55deg, aqua 2%,  #1B4F72 50%);
         border-radius: 15px;
+        transition: transform 0.2s ease-out; 
     }
+    .polo:hover{
+        transform: scale(1.08);
+    } 
     h1{
         text-align: center;
         align-items: center;
@@ -269,5 +306,7 @@
              
     }
 }
-
-
+.link{
+    display: flex;
+    justify-content: center;
+}
