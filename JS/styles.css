@@ -87,4 +87,48 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
   }
+  .vertical-line {
+    border-left: 2px solid gray; 
+    height: auto; 
+}
+ .info-box{
+  display: flex;
+  justify-content: space-around
+ }
+ .square{
+  width: 65px;
+  height: 65px;
+
+ }
+ 
+ .info-box2{
+
+ }
+ .head-info-box{
+  display: flex;
+  justify-content: space-between;
+ }
+ .img-icon{
+  width: 65px;
+  height: 65px;
+  margin-left: -20px;
+ }
+ @media only screen and (max-width: 768px){
+  /* For mobile phones: */
+body{
+  transform: scale(0.8);
+}
+ }
+ @media only screen and (min-width: 600px){
+/* For tablets: */
+body{
+  transform: scale(0.9);
+}
+ }
+ @media only screen and (min-width: 768px){
+ body{
+  transform: scale(1);
+}
+ }
