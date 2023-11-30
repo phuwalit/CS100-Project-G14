@@ -51,28 +51,6 @@ function validateFormOnInput() {
   validateEmail();
 }
 
-// Function to fetch activity types from the backend
-/* async function fetchActivityTypes() {
-  try {
-    const response = await fetch(config.backendUrl + "getActivityType");
-    if (response.ok) {
-      const data = await response.json();
-      return data;
-    } else {
-      console.error("Failed to fetch activity types.");
-      return [];
-    }
-  } catch (error) {
-    console.error("An error occurred while fetching activity types:", error);
-    return [];
-  }
-} */
-
-// Event listener when the page content has finished loading
-document.addEventListener("DOMContentLoaded", async () => {
-  const activityTypes = await fetchActivityTypes();
-  populateActivityTypes(activityTypes);
-});
 
 // Function to submit the form
 // Function to submit the form
@@ -80,55 +58,51 @@ async function submitForm(event) {
   event.preventDefault();
 
   // Validate form inputs before submission
-  if (!validateName() || !validateStudentID() || !validateEmail()) {
-    return;
-  }
+
 
   const startDateInput = document.getElementById("startDate").value;
   const endDateInput = document.getElementById("endDate").value;
   const startDate = new Date(startDateInput);
   const endDate = new Date(endDateInput);
-
+  if (!validateName() || !validateStudentID() || !validateEmail()) {
+    return;
+  }
   if (endDate <= startDate) {
     alert("End datetime should be after the start datetime.");
     return;
   }
+  else{
+    var submit = document.getElementById("submit");
 
+    submit.onclick = function(){
+    var fullname = document.getElementById("fullname").value;
+    var studentID = document.getElementById("studentID").value;
+    var email = document.getElementById("email").value;
+    var workTitle = document.getElementById("workTitle").value;
+    var activityType = document.getElementById("activityType").value;
+    var academicYear = document.getElementById("academicYear").value;
+    var semester = document.getElementById("semester").value;
+    var startDate = document.getElementById("startDate").value;
+    var endDate = document.getElementById("endDate").value;
+    var location = document.getElementById("location").value;
+    var description = document.getElementById("description").value;
 
-  console.log(data);
+    document.getElementById("outputName").innerText = fullname;
+    document.getElementById("outputStudentID").innerText = studentID;
+    document.getElementById("outputEmail").innerText = email;
+    document.getElementById("outputWorkTitle").innerText = workTitle;
+    document.getElementById("outputActivityType").innerText = activityType;
+    document.getElementById("outputAcademicYear").innerText = academicYear;
+    document.getElementById("outputSemester").innerText = semester;
+    document.getElementById("outputStartDate").innerText = startDate;
+    document.getElementById("outputEndDate").innerText = endDate;
+    document.getElementById("outputLocation").innerText = location;
+    document.getElementById("outputDescription").innerText = description;
 
-  /* try {
-    // Send data to the backend using POST request
-    const response = await fetch(config.backendUrl + "record", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      const responseData = await response.json();
-      console.log("Form data submitted successfully!");
-
-      // Format JSON data for display
-      const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
-        .join("\n");
-
-      // Display success message with formatted data
-      alert(responseData.message + "\n" + formattedData);
-
-      document.getElementById("myForm").reset();
-    } else {
-      console.error("Failed to submit form data.");
-
-      // Display error message
-      alert("Failed to submit form data. Please try again.");
+    alert("Submit Success!!");
+    document.getElementById("myForm").reset();
     }
-  } catch (error) {
-    console.error("An error occurred while submitting form data:", error);
-  } */
+  }
 } 
 
 // Event listener for form submission
@@ -138,31 +112,3 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 document.getElementById("fullname").addEventListener("input", validateName);
 document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
-
-var submit = document.getElementById("submit");
-
-submit.onclick = function(){
-  var fullname = document.getElementById("fullname").value;
-  var studentID = document.getElementById("studentID").value;
-  var email = document.getElementById("email").value;
-  var workTitle = document.getElementById("workTitle").value;
-  var activityType = document.getElementById("activityType").value;
-  var academicYear = document.getElementById("academicYear").value;
-  var semester = document.getElementById("semester").value;
-  var startDate = document.getElementById("startDate").value;
-  var endDate = document.getElementById("endDate").value;
-  var location = document.getElementById("location").value;
-  var description = document.getElementById("description").value;
-
-  document.getElementById("outputName").innerText = fullname;
-  document.getElementById("outputStudentID").innerText = studentID;
-  document.getElementById("outputEmail").innerText = email;
-  document.getElementById("outputWorkTitle").innerText = workTitle;
-  document.getElementById("outputActivityType").innerText = activityType;
-  document.getElementById("outputAcademicYear").innerText = academicYear;
-  document.getElementById("outputSemester").innerText = semester;
-  document.getElementById("outputStartDate").innerText = startDate;
-  document.getElementById("outputEndDate").innerText = endDate;
-  document.getElementById("outputLocation").innerText = location;
-  document.getElementById("outputDescription").innerText = description;
-}
