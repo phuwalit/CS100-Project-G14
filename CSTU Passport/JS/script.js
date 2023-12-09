@@ -67,47 +67,10 @@ function clearField(){
     validateStudentID();
     validateEmail();
   }
-  // Function to fetch activity types from the backend
-async function fetchActivityTypes() {
-  try {
-    const response = await fetch(config.backendUrl + "getActivityType");
-    if (response.ok) {
-      const data = await response.json();
-      return data;
-    } else {
-      console.error("Failed to fetch activity types.");
-      return [];
-    }
-  } catch (error) {
-    console.error("An error occurred while fetching activity types:", error);
-    return [];
-  }
-}
-
-// Function to populate activity types in the select element
-function populateActivityTypes(activityTypes) {
-  const activityTypeSelect = document.getElementById("activityType");
-
-  for (const type of activityTypes) {
-    const option = document.createElement("option");
-    option.value = type.id;
-    option.textContent = type.value;
-    activityTypeSelect.appendChild(option);
-  }
-}
-
-// Event listener when the page content has finished loading
-document.addEventListener("DOMContentLoaded", async () => {
-  const activityTypes = await fetchActivityTypes();
-  populateActivityTypes(activityTypes);
-});
   
   
   async function submitForm(event) {
     event.preventDefault();
-  
-  
-  
   
     const startDateInput = document.getElementById("startDate").value;
     const endDateInput = document.getElementById("endDate").value;
@@ -162,68 +125,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   
       }
   
-    }
-    const formData = new FormData(event.target);
-    const data = {
-      first_name: formData.get("fullname").split(" ")[0],
-      last_name: formData.get("fullname").split(" ")[1],
-      student_id: parseInt(formData.get("studentID")),
-      email: formData.get("email"),
-      title: formData.get("workTitle"),
-      type_of_work_id: parseInt(formData.get("activityType")),
-      academic_year: parseInt(formData.get("academicYear")) - 543,
-      semester: parseInt(formData.get("semester")),
-      start_date: formData.get("startDate"),
-      end_date: formData.get("endDate"),
-      location: formData.get("location"),
-      description: formData.get("description")
-    };
-  
-    console.log(data);
-  
-    try {
-      // Send data to the backend using POST request
-      const response = await fetch(config.backendUrl + "record", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-  
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log("Form data submitted successfully!");
-  
-        // Format JSON data for display
-        const formattedData = Object.entries(responseData.data)
-          .map(([key, value]) => `"${key}": "${value}"`)
-          .join("\n");
-  
-        // Display success message with formatted data
-        alert(responseData.message + "\n" + formattedData);
-  
-        document.getElementById("myForm").reset();
-      } else {
-        console.error("Failed to submit form data.");
-  
-        // Display error message
-        alert("Failed to submit form data. Please try again.");
-      }
-    } catch (error) {
-      console.error("An error occurred while submitting form data:", error);
-    }
+
   }
+}
   
-    document.getElementById("fullname").value.reset();
-    document.getElementById("studentID").value.reset();
-    document.getElementById("email").value.reset();
     
-   
-  
-  
+
   document.getElementById("myForm").addEventListener("submit", submitForm);
-  
   document.getElementById("fullname").addEventListener("input", validateName);
   document.getElementById("studentID").addEventListener("input", validateStudentID);
   document.getElementById("email").addEventListener("input", validateEmail);
