@@ -182,7 +182,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(data);
   
     try {
-      const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
+      // Send data to the backend using POST request
+      const response = await fetch(config.backendUrl + "record", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -191,30 +192,34 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
   
       if (response.ok) {
+        const responseData = await response.json();
+        console.log("Form data submitted successfully!");
   
+        // Format JSON data for display
         const formattedData = Object.entries(responseData.data)
           .map(([key, value]) => `"${key}": "${value}"`)
           .join("\n");
+  
+        // Display success message with formatted data
+        alert(responseData.message + "\n" + formattedData);
   
         document.getElementById("myForm").reset();
       } else {
         console.error("Failed to submit form data.");
   
-
+        // Display error message
         alert("Failed to submit form data. Please try again.");
       }
     } catch (error) {
       console.error("An error occurred while submitting form data:", error);
     }
-    
-  
-  
+  }
   
     document.getElementById("fullname").value.reset();
     document.getElementById("studentID").value.reset();
     document.getElementById("email").value.reset();
     
-  } 
+   
   
   
   document.getElementById("myForm").addEventListener("submit", submitForm);
